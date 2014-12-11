@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Category.find_or_create_by(:name => "games", :slug => "games")
+Category.find_or_create_by(:name => "movies", :slug => "movies")
+Category.find_or_create_by(:name => "tv", :slug => "tv")
