@@ -6,6 +6,27 @@ Keepthisbrief::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'static_pages#index'
+  get 'backsies' => 'static_pages#backsies'
+
+
+    namespace :admin do
+    resources :categories do
+      resources :posts
+    end
+    resource :dashboard, :only => :show
+    resource :users, :only => :show
+    end
+
+    resources :categories, :only => [] do
+      resources :posts, :only => [:index]
+    end
+    resources :posts, :only => [:show, :index]
+
+
+
+
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
