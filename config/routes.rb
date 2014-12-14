@@ -10,11 +10,11 @@ Keepthisbrief::Application.routes.draw do
 
 
     namespace :admin do
-    resources :categories do
-      resources :posts
-    end
-    resource :dashboard, :only => :show
-    resource :users, :only => :show
+      resources :categories do
+        resources :posts
+      end
+      resource :dashboard, :only => :show
+      resource :users, :only => :show
     end
 
     resources :categories, :only => [] do
