@@ -1,24 +1,10 @@
-<% @categories.each do |category| %>
-  <%= category.name %><br>
-<% end %>
+ <div class="col-xs-12 host text-center">
 
 
-<!-- <div class="col-xs-12 hero text-center">
-
-</div> -->
 <h1>Home</h1>
 <br><br>
 <div>
-
-
-<% Category.all.each do |t| %>
-
-
-  <h3>New <%= link_to "#{t.name}", new_admin_category_post_path(t) %> post</h3>
-  <p><%= "#{t.name}" %></p> <br />
-
-<% end %>
-
+</div>
 
 <br><br>
 <%= link_to "Admin Dashboard", admin_dashboard_path %>
@@ -27,10 +13,8 @@
 
 <% Category.all.each do |t| %>
 
-
   <h3>View <%= link_to "#{t.name}", category_posts_path(t) %> posts</h3>
-  <p><%= "#{t.name}" %></p> <br />
 
 <% end %>
 
-<%= link_to "View Posts", posts_path %>
+<h3>View <%= link_to "All", posts_path %> posts</h3>

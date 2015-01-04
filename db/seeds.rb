@@ -9,3 +9,8 @@
 Category.find_or_create_by(:name => "games", :slug => "games")
 Category.find_or_create_by(:name => "movies", :slug => "movies")
 Category.find_or_create_by(:name => "tv", :slug => "tv")
+#Category.find_or_create_by(:name => "tech", :slug => "tech")
+
+Post.find_or_create_by(:name => "tech", :slug => "tech")
+Post.find_or_create_by(:name => "tech", :slug => "tech")
+Post.find_or_create_by(:name => "tech", :slug => "tech")

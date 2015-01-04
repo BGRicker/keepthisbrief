@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic);
 
 body{
-  background-color: #7f8c8d;
+  background-color: #ecf0f1;
 }
 
 .hero {
@@ -37,4 +37,21 @@ body{
 }
 .hero2 h2 {
   font-family: 'Fira Sans', sans-serif;
+}
+
+.navbar {
+  background-color: #c0392b;
+  font-family: Raleway;
+  font-color: #ecf0f1;
+}
+
+.navbar a:link {
+  font-family: Raleway;
+  font-color: #ecf0f1;
+  font-size: 20px
+}
+
+.navbar a:link brand {
+  font-size: 30px;
+  color: #ecf0f1;
 }

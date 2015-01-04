@@ -1,0 +1,6 @@
+<h1>Create a new post</h1>
+<%= simple_form_for @post do |f| %>
+  <%= f.input :name, label: 'Name of the game/movie/show' %>
+  <%= f.input :review, placeholder: 'This is the review.' %>
+  <%= f.button :submit %>
+<% end %>
