@@ -2,16 +2,17 @@ class Admin::PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @categories = current_category
-    if @post.valid?
-      redirect_to root_path
-    else
-      render :new, :status => :unprocessable_entity
-    end
+    @category = Category.all
   end
 
   def create
-  
+    @post = Post.find_by_slug(params[:category_id])
+    @post.posts.create(post_params)
+    redirect_to root_path
+  end
+
+  def index
+    @post = Post.all
   end
 
 private
