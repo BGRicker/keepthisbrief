@@ -21,4 +21,28 @@ class Admin::PostsController < AdminController
     params.require(:post).permit(:name, :review, :rating)
   end
 
+
+
+#  def update
+#    @post = Post.find(params[:id])		#find specified post
+
+#    if @post.user != current_user			#if user isn’t the current_user
+#      return render :text => 'Not Allowed', :status => :forbidden
+#    end
+
+#    @post.update_attributes(post_params)	#update_attributes for specified post
+#    redirect_to post_path					#redirect_to root (home)
+#  end
+
+#  def destroy
+#    @post = Post.find(params[:id])
+
+#    if @post.user != current_user
+#      return render :text => 'Not Allowed', :status => :forbidden
+#    end
+
+#    @post.destroy
+#    redirect_to post_path
+#  end
+
 end

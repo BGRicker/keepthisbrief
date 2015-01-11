@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   belongs_to :category
+  belongs_to :user
   validates :name, :review, presence: true
-  validates :review, length: { maximum: 140, minimum: 20 }
+  validates :name, length: { in: 5..35 }
+  validates :review, length: { in: 20..140 }
 
 end
