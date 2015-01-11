@@ -1,6 +1,6 @@
 <h1>Create a new post</h1>
-<%= simple_form_for @post do |f| %>
-  <%= f.input :name, label: 'Name of the game/movie/show' %>
-  <%= f.input :review, placeholder: 'This is the review.' %>
-  <%= f.button :submit %>
+<%= simple_form_for @post, :url =>admin_category_posts_path do |f| %>
+  <%= f.input :name, label: "Title of review" %>
+  <%= f.input :review, placeholder: "Review" %>
+  <%= f.submit 'Create', :class => 'btn btn-primary' %>
 <% end %>

@@ -1,11 +1,16 @@
 class PostsController < ApplicationController
 
   def show
-    @posts = current_post.questions
+    @post = Post.find(params[:id])
   end
 
   def index
-    @posts = Post.all
+    if params[:category_id].present?
+      @category = Category.find_by_slug(params[:category_id])
+      @posts = @category.posts
+    else
+      @posts = Post.all
+    end
     @users = User.all
   end
 
