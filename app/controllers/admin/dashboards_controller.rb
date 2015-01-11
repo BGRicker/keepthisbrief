@@ -1,9 +1,10 @@
-class Admin::DashboardsController < ApplicationController
+class Admin::DashboardsController < AdminController
 
   def show
-  end
-
-  def index
+    @posts = Post.all
+    @post = Post.new
+    @users = User.all
+    @categories = Category.all
   end
 
 end

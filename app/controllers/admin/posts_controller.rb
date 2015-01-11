@@ -1,4 +1,4 @@
-class Admin::PostsController < ApplicationController
+class Admin::PostsController < AdminController
 
   def index
     @post = Post.all
@@ -12,13 +12,13 @@ class Admin::PostsController < ApplicationController
   def create
     @category = Category.find_by_slug(params[:category_id])
     @category.posts.create(post_params)
-    redirect_to root_path
+    redirect_to posts_path
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:name, :review)
+    params.require(:post).permit(:name, :review, :rating)
   end
 
 end

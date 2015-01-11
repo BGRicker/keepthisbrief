@@ -1,5 +1,5 @@
-<h1>ALL THE POSTS!</h1>
+<h1>All posts</h1>
 <% @post.each do |post| %>
-  <%= post.name %> <br>
-  <%= post.review %> <br>
+  <h2><%= link_to post.name, post_path(post) %></h2>
+  <h4><%= post.review %></h4>
 <% end %>

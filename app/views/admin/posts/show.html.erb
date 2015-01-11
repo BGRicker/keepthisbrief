@@ -1,0 +1,8 @@
+
+<div>
+  <h1><%= @post.name.titleize %> </h1>
+  <h2><%= link_to @post.category.name.titleize, category_posts_path(@post.category) %></h2>
+  <%= @post.review %><br></center>
+  <br>
+  <p><%= @post.rating %></p><br>
+</div>
