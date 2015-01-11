@@ -1,4 +1,6 @@
-<%= @post.each do |p| %>
-  <%= p.name %>
-  <%= p.review %>
+<% @posts.each do |post| %>
+  <div class="postbox">
+    <%= post.name %> <br>
+    <%= post.review %>
+  </div>
 <% end %>
