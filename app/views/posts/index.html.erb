@@ -1,6 +1,8 @@
 <% @posts.each do |post| %>
   <div class="postbox">
-    <%= post.name %> <br>
-    <%= post.review %>
+    Title: <h3><%= post.name %></h3> <br>
+    Review: <h4><%= post.review %></h4> <br>
+    Rating: <h4><%= post.rating %></h4> <br>
+    Community Rating:
   </div>
 <% end %>
