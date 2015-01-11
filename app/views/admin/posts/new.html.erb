@@ -2,6 +2,6 @@
 <%= simple_form_for @post, :url =>admin_category_posts_path do |f| %>
 <%= f.input :name %>
 <%= f.input :review %>
-<%= f.input :rating %>
+<%= f.input :rating, priority: [1], collection: [1, 2, 3, 4, 5] %>
 <%= f.submit 'Create', :class => 'btn btn-primary' %>
 <% end %>
