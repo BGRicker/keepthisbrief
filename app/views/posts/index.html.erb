@@ -1,6 +1,13 @@
+<style type="text/css">
+.showme{
+  border: 1px solid black;
+}
+
+</style>
+
 <% @posts.each do |post| %>
-  <div class="review-box">
-    <h3>Title: <%= post.name %></h3> <br>
+<div class="showme col-xs-10 col-xs-offset-1">
+    <h3><%= link_to post.name, post_path(post) %></h3> <br>
     <h4>Review: <%= post.review %></h4> <br>
     <h4>Rating: <%= post.rating %></h4> <br>
   </div>
