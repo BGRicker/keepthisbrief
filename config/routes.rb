@@ -20,7 +20,9 @@ Keepthisbrief::Application.routes.draw do
     resources :categories, :only => [] do
       resources :posts, :only => [:index]
     end
-    resources :posts, :only => [:show, :index]
+    resources :posts, :only => [:show, :index] do
+      resource :likes, module: :posts
+    end
 
 
 
