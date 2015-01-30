@@ -6,9 +6,8 @@
 
 <%= @post.likes.count %>
 
-<%= @post.likes.each do |like| %>
+<% @post.likes.each do |like| %>
 <%= image_tag like.user.avatar_url, width: 20 %><br>
-
 <% end %>
 
 <!-- calling inspect on like when retrieving like.user.avatar_url -->
