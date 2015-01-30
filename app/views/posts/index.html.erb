@@ -10,5 +10,6 @@
     <h3><%= link_to post.name, post_path(post) %></h3> <br>
     <h4>Review: <%= post.review %></h4> <br>
     <h4>Rating: <%= post.rating %></h4> <br>
+    <h4>Likes: <%= post.likes.count %></h4><br>
   </div>
 <% end %>
