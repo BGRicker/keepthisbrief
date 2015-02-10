@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
+  has_many :likes
 
   validates :name, :review, presence: true
   validates :name, length: { in: 5..35 }
