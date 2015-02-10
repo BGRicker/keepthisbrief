@@ -7,9 +7,9 @@
 
 <% @posts.each do |post| %>
 <div class="showme col-xs-10 col-xs-offset-1">
-    <h3><%= link_to post.name, post_path(post) %></h3> <br>
-    <h4>Review: <%= post.review %></h4> <br>
-    <h4>Rating: <%= post.rating %></h4> <br>
-    <h4>Likes: <%= post.likes.count %></h4><br>
+    <h3><%= link_to post.name, post_path(post) %></h3>
+    <h4>Review: <%= post.review %></h4>
+    <h4>Rating: <%= post.rating %></h4>
+    <h5>Likes: <%= post.likes.count %></h5><br>
   </div>
 <% end %>
